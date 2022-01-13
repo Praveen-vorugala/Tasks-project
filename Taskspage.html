@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+  <title>Taskspage</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    table, th, td {
+      text-align: center;
+      border-radius: 5px;
+      border:3px solid black;
+      margin-left: 250px;
+      margin-top: -150px;
+      padding: 10px;
+    }
+    .form-control{
+      width: 100%;
+    }
+    body{
+      background-image: url("Images/task-back.png");
+      background-size: cover;
+    }
+      .padd{
+        padding-top: 30px;
+        padding-right: 10px;
+        margin-left: 450px;
+      margin-top:80px;
+      margin-bottom: 200px;
+      background-color:wheat;
+      width:40%;
+      height:300px;
+      border-radius: 25px;
+      }
+      #popup {
+        display: none;
+        z-index: 20;
+        padding: 25px;
+        background-color: #e8f4fa;
+        box-shadow: 0px 0px 3px black;
+        border-radius: 5px;
+        width: 350px;
+        top: 100px;
+        left: calc(50% - 175px);
+        position: absolute;
+        font-family: sans-serif;
+        }
+        #backdrop {
+        display: none;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        }
+        #button1{
+          padding:5px;
+          width:200px;
+        }
+        .text-danger{
+          color: white;
+          background-color: red;
+          border-radius: 5px;
+        }
+        .text-edit{
+          color:white;
+          background-color: green;
+          border-radius: 5px;
+        }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Tasks</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Tasks</a></li>
+            <li><a href="Remainders.html">remainders</a></li>
+      <li><form class="navbar-form navbar-left" >
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Signup-page.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container padd">
+        <form class="form-horizontal" action="#">
+          <div class="form-group">  
+        <label class="control-label col-sm-2"for="tname">Taskname:</label>
+      <div class="col-sm-7">
+      <input type="text" class="form-control" id="tname" placeholder="Taskname" name="tname">
+      </div>
+      </div>
+      <br>
+      <br>
+      <div class="form-group">  
+        <label class="control-label col-sm-2"for="tname">Complete by:</label>
+      <div class="col-sm-7">
+      <input type="time" class="form-control" id="time" name="Ttime">
+      </div>
+      </div>
+      <br><br>
+      <div class="form-group">  
+        <label class="control-label col-sm-2"for="tname">Taskpriority</label>
+      <div class="col-sm-7">
+        <select id="priority" name="priority"class="form-control" >
+          <option value="High">high</option>
+          <option value="meduim">meduim</option>
+          <option value="low">low</option>
+        </select>
+      </div>
+      </div>
+      <br><br>
+      <div class="form-group">  
+        <div class="control-label col-sm-6">
+           <button class="btn btn-default" id="ctask" onclick=" return createTask(); ">Create Task</button>
+           <button class="btn btn-danger" id="dtask">DeleteAllTasks</button>
+        </div>
+        </div>
+        <br><br><br>
+      </form>
+      </div>
+      <div class="container display">
+        <table style="width:55%" id="table">
+          <tr>
+            <th>Tasks are displyed here</th>
+          </tr>
+        </table>
+      </div>
+
+      <div id="popup">
+        <h2>Task is created</h2>
+        <img src="Images/checkmark.jpg" width="250" height="260"><br><br>
+        <button id="Taskspg" >Taskspage </button>
+      </div>
+      <div id="backdrop"></div>
+    </body>
+  <script type="text/JavaScript" src="js/createtask.js"></script>

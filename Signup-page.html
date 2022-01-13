@@ -1,0 +1,111 @@
+<html>
+<head>
+<script type="text/JavaScript" src="js/val.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+  body{
+      background-image: url('Images/back_pe.jpg');
+      background-size:cover;
+    }
+    .center_div{
+      border-radius: 25px;
+      height:500px;
+      border: 1px solid;
+      padding-top: 20px;
+      background-color:lavender;
+        width:50%; 
+    }
+    .se{
+      padding-top: 5px;
+    }
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Tasks</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="Taskspage.html">Tasks</a></li>
+      <li><a href="#">remainders</a></li>
+      <li><input type="text" class="form-control se" placeholder="Search"></li>
+      <li><button type="submit" class="btn btn-default">Submit</button></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <li><a href="Signup-page.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+  </nav><br><br>
+  <h1 class="text-center" style="color:ghostwhite;">Sign Up Form</h1>
+  <div class="container center_div">
+    <form class="form-horizontal" name="signin" id="form-id">
+    <div class="form-group">
+        <label class="control-label col-sm-2"for="fname">First name:</label>
+        <div class="col-sm-5">
+        <input type="text" class="form-control" id="fname" name="fname">
+        <span id="ername"class="text-danger font-weight-regular"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2"for="lastname">Last name:</label>
+        <div class="col-sm-5">
+        <input type="text" class="form-control" id="lname" name="lastname">
+        <span id="erlname"class="text-danger font-weight-regular"></span>
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2"for="lastname">Email:</label>
+          <div class="col-sm-5">
+          <input type="text" class="form-control" id="email" name="email">
+          <span id="eremail"class="text-danger font-weight-regular"></span>
+          <span id="eremail1"class="text-danger font-weight-regular"></span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2"for="lastname">Mobile number:</label>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" id="Mobileno" name="mobileno">
+            <span id="ermob"class="text-danger font-weight-regular"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2"for="Gender">Gender:</label>
+            <div class="col-sm-5">
+            <input type="radio" class="btn-check" autocomplete="off">
+            <label >Male</label>
+            <input type="radio" class="btn-check" autocomplete="off">
+            <label >Female</label>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="DOB">DOB:</label>
+              <div class="col-sm-5">
+              <input type="date" class="form-control" id="lname" name="lastname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pass">Password:</label>
+              <div class="col-sm-5">
+              <input type="password" class="form-control" id="pwd" name="pass">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pass2">Confirm Password:</label>
+              <div class="col-sm-5">
+              <input type="password" class="form-control" id="pwd2" name="pass2">
+              <span id="erconf"class="text-danger font-weight-regular"></span>
+              </div>
+            </div>
+            <div class="formgroup">
+            <div class="col-sm-offset-2 col-sm-5" >
+                <input type="submit" onclick="return validateForm()">
+            </div>
+            </div>
+        </form> 
+   </div>
+</body>
+
+
